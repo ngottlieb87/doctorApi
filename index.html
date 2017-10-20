@@ -14,14 +14,37 @@
         <h1>Doctor Search</h1>
       </div>
       <div class = "card">
+        <h3>Find doctors depending on your ailment:</h3>
         <form id = "form">
           <label for= "ailmentTitle">Search for Doctors by ailment</label>
           <input id = "ailment">
           <br>
           <br>
-          <button type = 'submit' class="btn btn-primary">Search</button>
+          <button type = 'submit' class="btn btn-primary" id= "ailmentButt">Search</button>
         </form>
-          <ul><span id="output"></span><ul>
+        <br>
+        <br>
+        <h3>Find Doctors by their name:</h3>
+        <form id = "formDoctor">
+          <label for= "name">Find Doctor by Name</label>
+          <input id = "doctorName">
+          <br>
+          <br>
+          <button type = 'submit' class="btn btn-primary" id="nameButt">Search</button>
+        </form>
+        <div id = "displayAilment">
+          <div class = "card">
+            <h3>Doctors:</h3>
+            <ul><span id="outputAilment"></span><ul>
+          </div>
+        </div>
+        <div id="displayName">
+          <div class = "card">
+            <h3>Doctors:</h3>
+            <ul><span id="outputDoctor"></span><ul>
+          </div>
+        </div>
+        </div>
       </div>
     </div>
   </body>

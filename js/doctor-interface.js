@@ -1,11 +1,27 @@
 import { Doctor } from './../js/doctor.js';
 
 $(document).ready(function(){
+
   $("#form").submit(function(){
     event.preventDefault();
-    $('#output').text('');
+    $('#outputAilment').text('');
     let ailment = $('#ailment').val();
+    // let doctor = $('#doctor').val();
     let doctor = new Doctor;
-    let searchAilment = doctor.apiCall(ailment);
+    $('#displayAilment').fadeIn(800)
+    $('#displayName').hide();
+    doctor.ailmentSearch(ailment);
+
   });
+
+  $('#formDoctor').submit(function(){
+    event.preventDefault();
+    $('#ouputDoctor').text('');
+    let name = $('#doctorName').val();
+    let doctorName = new Doctor;
+    $('#displayName').slideDown();
+    $('#displayAilment').hide();
+    doctorName.doctorSearch(name);
+  });
+
 });
