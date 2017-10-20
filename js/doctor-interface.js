@@ -6,7 +6,6 @@ $(document).ready(function(){
     event.preventDefault();
     $('#outputAilment').text('');
     let ailment = $('#ailment').val();
-    // let doctor = $('#doctor').val();
     let doctor = new Doctor;
     $('#displayAilment').fadeIn(800)
     $('#displayName').hide();

@@ -5,3 +5,37 @@
 #displayName{
   display: none;
 }
+
+.card{
+  padding: 12px;
+  margin: 20px;
+  background-color:#FEFDE5;
+}
+
+.jumbotron{
+  text-align: center;
+  background-color: #FEFDE5;
+  font-family: 'Raleway', sans-serif;
+  font-size: 40px;
+}
+
+h3{
+  font-family: 'Noto Sans', sans-serif;
+}
+
+p{
+  font-size: 20px;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+body{
+  background-color: #53637D;
+}
+
+ul{
+  margin: 10px;
+}
+
+li{
+  margin: 10px;
+}
