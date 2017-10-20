@@ -14,7 +14,7 @@ _Find doctors in your local area by your ailment or by doctor name_
 | Enter a doctor name and get all doctors with full or partial name and get full details for that doctor| "Brian" |"Chris R Littlebad"|  
 | | |"Accepting New Patients: true"|
 | | |"Address: 1234 Some Odd Place, Portland Or 97035"|
-| | |"Website: http://xxXXxx.com/"|      
+| | |Website: _website address_|      
 
 
 ## Setup/Installation Requirements
