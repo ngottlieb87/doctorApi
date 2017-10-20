@@ -2,7 +2,7 @@ import { Doctor } from './../js/doctor.js';
 
 $(document).ready(function(){
 
-  $("#form").submit(function(){
+  $("#form").submit(function(event){
     event.preventDefault();
     $('#outputAilment').text('');
     let ailment = $('#ailment').val();
@@ -14,14 +14,16 @@ $(document).ready(function(){
 
   });
 
-  $('#formDoctor').submit(function(){
+  $('#formDoctor').submit(function(event){
     event.preventDefault();
     $('#ouputDoctor').text('');
     let name = $('#doctorName').val();
     let doctorName = new Doctor;
+
+    doctorName.doctorSearch(name);
+
     $('#displayName').slideDown();
     $('#displayAilment').hide();
-    doctorName.doctorSearch(name);
-  });
 
+  });
 });
