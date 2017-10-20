@@ -21,7 +21,7 @@ export class Doctor{
       let parsedAil = JSON.parse(response);
       // debugger;
       parsedAil.data.forEach(function(ailment){
-        $('#outputAilment').append(`<li><p>${ailment.profile.first_name} ${ailment.profile.last_name}</p></li>`);
+        $('#outputAilment').append(`<li><p>${ailment.profile.first_name} ${ailment.profile.last_name} ${ailment.profile.title}, ${ailment.specialties[0].actor}</p></li>`);
           // debugger;
       });
     },
@@ -48,13 +48,11 @@ export class Doctor{
     promise.then(function(response){
       let parsedName = JSON.parse(response);
       parsedName.data.forEach(function(doctor){
-        debugger;
-        $('#outputDoctor').append(`<li><p>${doctor.profile.first_name} ${doctor.profile.last_name} ${doctor.profile.title}</p></li>
+        $('#outputDoctor').append(`<li><p>${doctor.profile.first_name} ${doctor.profile.middle_name} ${doctor.profile.last_name} ${doctor.profile.title}</p></li>
       <p>Accpeting New patients: ${doctor.practices[0].accepts_new_patients}</p>
       <p>Address: ${doctor.practices[0].visit_address.street} ${doctor.practices[0].visit_address.city}, ${doctor.practices[0].visit_address.state} ${doctor.practices[0].visit_address.zip}</p>
       <p>Phone Number: ${doctor.practices[0].phones[0].number}</p>
       <p>Website: ${doctor.practices[0].website}</p>`);
-
       });
     },
     function(error){
