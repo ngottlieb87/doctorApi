@@ -48,15 +48,23 @@ export class Doctor{
     promise.then(function(response){
       let parsedName = JSON.parse(response);
       parsedName.data.forEach(function(doctor){
-        $('#outputDoctor').append(`<li><p>${doctor.profile.first_name} ${doctor.profile.middle_name} ${doctor.profile.last_name} ${doctor.profile.title}</p></li>
-        <p>Accpeting New Patients: ${doctor.practices[0].accepts_new_patients}</p>
-        <p>Address: ${doctor.practices[0].visit_address.street} ${doctor.practices[0].visit_address.city}, ${doctor.practices[0].visit_address.state} ${doctor.practices[0].visit_address.zip}</p>
-        <p>Phone Number: ${doctor.practices[0].phones[0].number}</p>
-        <p>Website: <a href=${doctor.practices[0].website}>${doctor.practices[0].website}</a></p>`);
+        if(`${doctor.practices[0].website}` == "undefined"){
+          $('#outputDoctor').append(`<li><p>${doctor.profile.first_name}  ${doctor.profile.last_name} ${doctor.profile.title}</p></li>
+          <p>Accpeting New Patients: ${doctor.practices[0].accepts_new_patients}</p>
+          <p>Address: ${doctor.practices[0].visit_address.street} ${doctor.practices[0].visit_address.city}, ${doctor.practices[0].visit_address.state} ${doctor.practices[0].visit_address.zip}</p>
+          <p>Phone Number: ${doctor.practices[0].phones[0].number}</p>
+          <p>Website: <em>No Website</em> </p>`);
+        } else{
+            $('#outputDoctor').append(`<li><p>${doctor.profile.first_name} ${doctor.profile.middle_name} ${doctor.profile.last_name} ${doctor.profile.title}</p></li>
+            <p>Accpeting New Patients: ${doctor.practices[0].accepts_new_patients}</p>
+            <p>Address: ${doctor.practices[0].visit_address.street} ${doctor.practices[0].visit_address.city}, ${doctor.practices[0].visit_address.state} ${doctor.practices[0].visit_address.zip}</p>
+            <p>Phone Number: ${doctor.practices[0].phones[0].number}</p>
+            <p>Website: <a href=${doctor.practices[0].website}>${doctor.practices[0].website}</a></p>`);
+          }
         });
       },
       function(error){
-        $('#outputDoctor').text(`There was an error with your search. Please try again.`);
+        $('#outputDoctor').text(`There was an error with your search. ${error.message}`);
     });
   }
 }
