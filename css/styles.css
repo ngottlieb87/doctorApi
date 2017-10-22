@@ -6,6 +6,14 @@
   display: none;
 }
 
+#ailmentButt{
+  margin-bottom: 20px;
+}
+
+#nameButt{
+  margin-bottom: 20px;
+}
+
 .card{
   padding: 12px;
   margin: 20px;

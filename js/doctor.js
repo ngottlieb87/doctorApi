@@ -59,7 +59,7 @@ export class Doctor{
             <p>Accpeting New Patients: ${doctor.practices[0].accepts_new_patients}</p>
             <p>Address: ${doctor.practices[0].visit_address.street} ${doctor.practices[0].visit_address.city}, ${doctor.practices[0].visit_address.state} ${doctor.practices[0].visit_address.zip}</p>
             <p>Phone Number: ${doctor.practices[0].phones[0].number}</p>
-            <p>Website: <a href=${doctor.practices[0].website}>${doctor.practices[0].website}</a></p>`);
+            <p>Website: <a href="${doctor.practices[0].website}">${doctor.practices[0].website}</a></p>`);
           }
         });
       },
