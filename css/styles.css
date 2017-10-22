@@ -14,9 +14,12 @@
   margin-bottom: 20px;
 }
 
-.card{
-  padding: 12px;
-  margin: 20px;
+.cardSearch{
+  background-color:#FEFDE5;
+  padding: 20px;
+}
+
+.cardList{
   background-color:#FEFDE5;
 }
 
@@ -24,7 +27,6 @@
   text-align: center;
   background-color:#FEFDE5;
   font-family: 'Raleway', sans-serif;
-  font-size: 40px;
 }
 
 h3{

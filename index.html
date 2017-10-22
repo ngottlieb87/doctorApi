@@ -15,39 +15,44 @@
       <div class= "jumbotron">
         <h1>Doctor Search</h1>
       </div>
-      <div class = "card">
-        <h3>Find doctors depending on your ailment:</h3>
-        <form id = "form">
-          <label for= "ailmentTitle">Search for Doctors by ailment</label>
-          <input id = "ailment">
-          <br>
-          <br>
-          <button type = 'submit' class="btn btn-primary" id= "ailmentButt">Search</button>
-        </form>
-        <h3>Get Doctor Details:</h3>
-        <form id = "formDoctor">
-          <label for= "name">Find Doctor by Name</label>
-          <input id = "doctorName">
-          <br>
-          <br>
-          <button type = 'submit' class="btn btn-primary" id="nameButt">Search</button>
-        </form>
-        <br>
-        <br>
-        <div id = "displayAilment">
-          <div class = "card">
-            <h3>Doctors To Help With Your Ailment:</h3>
-            <ul><span id="outputAilment"></span><ul>
+        <div class="row">
+          <div class="col-sm-6">
+            <div class = " card cardSearch">
+              <h3>Find A Doctor For You:</h3>
+              <form id = "form">
+                <label for= "ailmentTitle">Search for Doctors by ailment</label>
+                <input id = "ailment">
+                <br>
+                <br>
+                <button type = 'submit' class="btn btn-primary" id= "ailmentButt">Search</button>
+              </form>
+              <h3>Get Doctor Details:</h3>
+              <form id = "formDoctor">
+                <label for= "name">Find Doctor by Name</label>
+                <input id = "doctorName">
+                <br>
+                <br>
+                <button type = 'submit' class="btn btn-primary" id="nameButt">Search</button>
+              </form>
+            </div>
           </div>
-        </div>
-        <div id="displayName">
-          <div class = "card">
-            <h3>Doctors:</h3>
-            <ul>
-              <span id="outputDoctor"></span><space id="newPatients"></span>
-            <ul>
+            <div class="col-sm-6">
+              <div id = "displayAilment">
+                <div class = "card cardList">
+                  <h3>Doctors That Can Help You:</h3>
+                  <ul><span id="outputAilment"></span><ul>
+                </div>
+              </div>
+              <div id="displayName">
+                <div class = "card">
+                  <h3>Doctors:</h3>
+                  <ul>
+                    <span id="outputDoctor"></span><space id="newPatients"></span>
+                  <ul>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
         </div>
       </div>
     </div>
