@@ -19,10 +19,8 @@ export class Doctor{
 
     promise.then(function(response){
       let parsedAil = JSON.parse(response);
-      // debugger;
       parsedAil.data.forEach(function(ailment){
         $('#outputAilment').append(`<li><p>${ailment.profile.first_name} ${ailment.profile.last_name} ${ailment.profile.title}, ${ailment.specialties[0].actor}</p></li>`);
-          // debugger;
       });
     },
     function(error){
@@ -33,7 +31,7 @@ export class Doctor{
   doctorSearch(name){
     let promise = new Promise(function(resolve,reject){
       let request = new XMLHttpRequest();
-      let url = `https://api.betterdoctor.com/2016-03-01/doctors?query=${name}&name=${name}&location=or-portland&user_location=37.773%2C-122.413&skip=0&limit=100&user_key=${apiKey}`;
+      let url = `https://api.betterdoctor.com/2016-03-01/doctors?query=${name}&name=${name}&location=or-portland&skip=0&limit=100&user_key=${apiKey}`;
       request.onload = function(){
         if(this.status === 200){
           resolve(request.response);

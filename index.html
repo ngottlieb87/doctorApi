@@ -21,7 +21,7 @@
               <h3>Find A Doctor For You:</h3>
               <form id = "form">
                 <label for= "ailmentTitle">Search for Doctors by ailment</label>
-                <input id = "ailment">
+                <input id = "ailment" required>
                 <br>
                 <br>
                 <button type = 'submit' class="btn btn-primary" id= "ailmentButt">Search</button>
@@ -29,7 +29,7 @@
               <h3>Get Doctor Details:</h3>
               <form id = "formDoctor">
                 <label for= "name">Find Doctor by Name</label>
-                <input id = "doctorName">
+                <input id = "doctorName" required>
                 <br>
                 <br>
                 <button type = 'submit' class="btn btn-primary" id="nameButt">Search</button>
@@ -44,7 +44,7 @@
                 </div>
               </div>
               <div id="displayName">
-                <div class = "card">
+                <div class = "card cardSearch">
                   <h3>Doctors:</h3>
                   <ul>
                     <span id="outputDoctor"></span><space id="newPatients"></span>
