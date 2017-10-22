@@ -22,7 +22,7 @@
 
 .jumbotron{
   text-align: center;
-  background-color: #FEFDE5;
+  background-color:#FEFDE5;
   font-family: 'Raleway', sans-serif;
   font-size: 40px;
 }
@@ -37,7 +37,9 @@ p{
 }
 
 body{
-  background-color: #53637D;
+  /*background-color: #53637D;*/
+  background-image: url("https://images.pond5.com/falling-pills-background-footage-000293462_prevstill.jpeg");
+  background-size: 100%;
 }
 
 ul{
