@@ -63,7 +63,7 @@ export class Doctor{
             <p>Website: <a href="${doctor.practices[0].website}">${doctor.practices[0].website}</a></p>`);
           }
         });
-        if(parsedDoctor.data.length < 1){
+        if(parsedName.data.length < 1){
           $('#outputDoctor').append('There was an error with your search. No results found (\/)_(;,,;)_(\/)');
         }
       },
