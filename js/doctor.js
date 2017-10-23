@@ -22,9 +22,12 @@ export class Doctor{
       parsedAil.data.forEach(function(ailment){
         $('#outputAilment').append(`<li><p>${ailment.profile.first_name} ${ailment.profile.last_name} ${ailment.profile.title}, ${ailment.specialties[0].actor}</p></li>`);
       });
+      if(parsedAil.data.length < 1){
+        $('#outputAilment').append('There was an error with your search. No results found (\/)_(;,,;)_(\/)');
+      }
     },
     function(error){
-      $('#outputAilment').text(`There was an error with your search. ${error.message}`);
+      $('#outputAilment').append(`There was an error with your search. ${error.message}`);
     });
   }
 
@@ -60,9 +63,12 @@ export class Doctor{
             <p>Website: <a href="${doctor.practices[0].website}">${doctor.practices[0].website}</a></p>`);
           }
         });
+        if(parsedDoctor.data.length < 1){
+          $('#outputDoctor').append('There was an error with your search. No results found (\/)_(;,,;)_(\/)');
+        }
       },
       function(error){
-        $('#outputDoctor').text(`There was an error with your search. ${error.message}`);
+        $('#outputDoctor').append(`There was an error with your search. ${error.message}`);
     });
   }
 }
