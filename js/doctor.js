@@ -24,7 +24,7 @@ export class Doctor{
       });
     },
     function(error){
-      $('#outputAilment').text(`There was an error with your search. Please try again.`);
+      $('#outputAilment').text(`There was an error with your search. ${error.message}`);
     });
   }
 
