@@ -19,7 +19,7 @@ _Find doctors in your local area by your ailment or by doctor name_
 
 ## Setup/Installation Requirements
 
-1. _`$ git clone` [...](...)_
+1. _`$ git clone doctorApi` to desired location_
 
 2. _`$ cd doctorApi/`_
 
@@ -30,6 +30,10 @@ _Find doctors in your local area by your ailment or by doctor name_
 5. _`bower install`_
 
 6. _`gulp build`_
+
+7. _`gulp serve`_
+
+8. In your favorite browser type in `localhost:3000`
 
 ## Languages Used
 _Javascript, Karma, NPM, Jasmine, Bootstrap, Bower, Gulp_
