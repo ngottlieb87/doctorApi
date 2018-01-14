@@ -11,7 +11,7 @@ _Find doctors in your local area by your ailment or by doctor name_
 | Description                        | Input       | Output                                |
 |------------------------------------|-------------|---------------------------------------|
 | Enter your ailment and get a list of doctors that can help you                        | sour throat         | "Mark Josh MD, Ear,Nose, and Throat Doctor" |
-| Enter a doctor name and get all doctors with full or partial name and get full details for that doctor| "Brian" |"Chris R Littlebad"|  
+| Enter a doctor name and get all doctors with full or partial name and get full details for that doctor| "Chris" |"Chris R Littlebad"|  
 | | |"Accepting New Patients: true"|
 | | |"Address: 1234 Some Odd Place, Portland Or 97035"|
 | | |Website: _website address_|      
